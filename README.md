@@ -2,7 +2,8 @@
 
 **Author:** Kankawee Aramrak (Undergraduate Computer Science Student)  
 **Date:** November 2026  
-**Paper:** [PDF](paper/ARM64_OpenMPI_LSE_Research_Paper.pdf) | [LaTeX Source](paper/ARM64_OpenMPI_LSE_Research_Paper.tex)
+**Paper:** [PDF](
+https://raw.githubusercontent.com/kang49/arm64-openmpi-lse-research/c52403d8ee3c8881b20b3d44dfe061e93e7ae297/paper/ARM64_OpenMPI_LSE_Research_Paper.pdf) | [LaTeX Source](paper/ARM64_OpenMPI_LSE_Research_Paper.tex)
 
 ---
 
@@ -77,13 +78,6 @@ gcc -O3 -mcpu=cortex-a76 -pthread benchmarks/bench_tail_batch.c -o bench_tail_ba
 ```bash
 mpicc -O3 -mcpu=cortex-a76 benchmarks/bench_mpi_test.c -o bench_mpi_test
 for i in 1 2 3 4 5; do mpirun -np 2 --bind-to core ./bench_mpi_test; done
-```
-
-### 4. Compile the Paper
-```bash
-cd paper
-pdflatex -interaction=nonstopmode ARM64_OpenMPI_LSE_Research_Paper.tex
-pdflatex -interaction=nonstopmode ARM64_OpenMPI_LSE_Research_Paper.tex
 ```
 
 ---
